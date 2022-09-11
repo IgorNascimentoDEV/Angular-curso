@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "fundamentos-angular": {
+    "angular-curso": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fundamentos-angular",
+            "outputPath": "dist/angular-curso",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,9 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -64,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "fundamentos-angular:build:production"
+              "browserTarget": "angular-curso:build:production"
             },
             "development": {
-              "browserTarget": "fundamentos-angular:build:development"
+              "browserTarget": "angular-curso:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fundamentos-angular:build"
+            "browserTarget": "angular-curso:build"
           }
         },
         "test": {
@@ -99,6 +103,6 @@
     }
   },
   "cli": {
-    "analytics": "03fe508d-7c7a-4641-a0bc-7d0ed56b46d3"
+    "analytics": "e5143cc5-3a05-4651-895a-bbe956d5cf03"
   }
 }
