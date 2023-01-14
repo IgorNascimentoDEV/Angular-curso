@@ -3,21 +3,17 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  app-title
-  <button (click)="adicionar()">Destruir</button>
+  <!-- <app-diretivas-atributos>
+  <h1>Aulas deretiva atributo</h1>
+  <hr>
+  </app-diretivas-atributos> -->
+  <app-diretivas-atributos></app-diretivas-atributos>
   <router-outlet></router-outlet>
   `
 })
 export class AppComponent implements OnInit{
 
-  public valor:number = 1
-
   constructor(){}
-
-  public adicionar(): number{
-    return this.valor += 1;
-  }
-
 
   ngOnInit(): void {
   }
