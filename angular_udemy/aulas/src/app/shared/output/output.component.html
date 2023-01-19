@@ -1,0 +1,6 @@
+<p *ngFor="let item of list; let i =index">
+  Nome: {{item.nome}} -
+  Idade: {{item.idade}}
+  <button (click)="getDados(i)">Enviar Dados</button>
+  <br>
+</p>
