@@ -1,0 +1,16 @@
+{
+    "lis-food":[
+        {
+            "id": 1,
+            "nome": "X bacon"
+        },
+        {
+            "id": 2,
+            "nome": "ovo"
+        },
+        {
+            "id": 3,
+            "nome": "galinha"
+        }
+    ]
+}
