@@ -16,9 +16,11 @@ import { Component, OnInit } from '@angular/core';
     <h1>{{getDados.nome}}</h1>
     <h2>{{getDados.idade}}</h2>
   </ng-template>
-  <app-output (enviarDados)="setDados($event)"></app-output>-->
+  <app-output (enviarDados)="setDados($event)"></app-output>
+
   <app-food-add></app-food-add>
-  <app-food-list></app-food-list>
+  <app-food-list></app-food-list>-->
+  <app-forms></app-forms>
   <router-outlet></router-outlet>
   `
 })

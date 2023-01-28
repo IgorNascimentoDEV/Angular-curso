@@ -9,7 +9,7 @@ import { FoodList } from '../../module/food-list';
 })
 export class FoodListComponent implements OnInit{
 
-  public foodList : FoodList | any;
+  public foodList: Array<FoodList> = [];
 
   constructor(private  foodListService: FoodListService ){}
 
@@ -20,9 +20,31 @@ export class FoodListComponent implements OnInit{
    )
 
     this.foodListService.emitEvent.subscribe(
-      re => alert(`Olha você add => ${re}`)
+      res =>{
+        alert(`Olha você add => ${res.nome}`)
+        return this.foodList.push(res)
+      },
     );
   }
 
+  public foodListDelete(id: number){
+    return this.foodListService.foodListDelete(id).subscribe(
+      res => {
+        this.foodList = this.foodList.filter(
+          item => {
+            return id !== item.id
+          }
+        )
+      },
+      error => error
+    )
+  }
 
+
+  public foodListEdit(value: string, id: number){
+    return this.foodListService.foodListEdit(value, id).subscribe(
+      res => res,
+      error => error
+    )
+  }
 }

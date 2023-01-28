@@ -1,16 +1,12 @@
 {
-    "lis-food":[
-        {
-            "id": 1,
-            "nome": "X bacon"
-        },
-        {
-            "id": 2,
-            "nome": "ovo"
-        },
-        {
-            "id": 3,
-            "nome": "galinha"
-        }
-    ]
+  "lis-food": [
+    {
+      "nome": "Igor Deve",
+      "id": 1
+    },
+    {
+      "nome": "item 2",
+      "id": 2
+    }
+  ]
 }

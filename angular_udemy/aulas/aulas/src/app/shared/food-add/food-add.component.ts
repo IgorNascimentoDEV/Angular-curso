@@ -8,9 +8,12 @@ import { FoodListService } from 'src/app/services/food-list.service';
 })
 export class FoodAddComponent {
 
-  constructor(private FoodListService:FoodListService){}
+  constructor(private foodListService:FoodListService){}
 
   public listAddItem(value:string){
-    return this.FoodListService.foodListAdd(value);
+    return this.foodListService.foodListAdd(value).subscribe(
+      res => this.foodListService.foodListAlert(res),
+      error => error
+    );
   }
 }
