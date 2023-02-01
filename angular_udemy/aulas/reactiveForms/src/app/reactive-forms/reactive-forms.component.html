@@ -1,0 +1,38 @@
+<form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+
+  <label>
+    Nome:
+    <input type="text" formControlName="firstName">
+    <span *ngIf="cadastroForm.get('firstName')?.errors && (cadastroForm.get('firstName')?.touched || cadastroForm.get('firstName')?.dirty)">
+      Favor Adicionar o nome
+    </span>
+  </label>
+
+  <br>
+  <br>
+
+  <label>
+    Sobrenome:
+    <input type="text" formControlName="lastName" >
+    <span *ngIf="cadastroForm.get('lastName')?.errors && (cadastroForm.get('lastName')?.touched || cadastroForm.get('lastName')?.dirty)">
+      Favor deve ter no minimo 5 {{ cadastroForm.get('lastName')?.errors | json}}
+    </span>
+  </label>
+
+  <br>
+  <br>
+
+  <label>
+    Email:
+    <input type="email" formControlName="email">
+  </label>
+  <p>
+    <!--{{ cadastroForm.get('firstName')?.errors | json}}
+    {{ cadastroForm.get('firstName')?.touched| json}}
+    {{ cadastroForm.get('firstName')?.dirty | json}}
+    {{ cadastroForm.get('lastName')?.errors | json}}-->
+    {{ cadastroForm.get('email')?.errors | json}}
+  </p>
+
+  <button [disabled]="cadastroForm.invalid">Enviar</button>
+</form>
